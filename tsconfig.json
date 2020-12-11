@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -22,15 +26,36 @@
     "experimentalDecorators": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
-      "@/": ["src/"],
-      "@/*": ["src/*"],
-      "@assets/*": ["assets/*"],
-      "@c/*": ["src/components/*"]
+      "@/": [
+        "src/"
+      ],
+      "@/*": [
+        "src/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@c/*": [
+        "src/components/*"
+      ]
     }
   },
-  "exclude": ["node_modules", ".next", "out", "./*.js"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "./*.js",
+    "config/**",
+    "babel.config.js",
+    "jest.config.js"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js"
+  ]
 }
