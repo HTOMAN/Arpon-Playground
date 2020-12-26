@@ -1,0 +1,32 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+:root {
+  --primary: #c7855b;
+  --secondary: #c3967b;
+  --background: #101219;
+  --bgg-tl: #3d3e40;
+  --bgg-br: #0b0e16;
+  --bg-static: #151518;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100vh;
+  }
+
+  body {
+    background: var(--background);
+    background: radial-gradient(240.13% 97.12% at 4.03% 1.13%, var(--bgg-tl) 5.21%, var(--bgg-br) 100%);
+  }
+}

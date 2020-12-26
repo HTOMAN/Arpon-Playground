@@ -1,3 +1,14 @@
 {
-  "css.validate": false
+  "css.validate": false,
+  "css.lint.emptyRules": "ignore",
+  "css.lint.unknownAtRules": "ignore",
+  "files.associations": {
+    "*.css": "css"
+  },
+  "stylelint.enable": true,
+  "javascript.suggestionActions.enabled": false,
+  "emmet.includeLanguages": {
+    "postcss": "pcss",
+    "css": "css"
+  },
 }
