@@ -72,5 +72,6 @@ module.exports = {
     'order/properties-order': [],
     'value-list-comma-newline-after': null,
     'declaration-colon-newline-after': null,
+    'function-comma-newline-after': null,
   },
 };

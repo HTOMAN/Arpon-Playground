@@ -1,4 +1,6 @@
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /*
 module.exports = {
   theme: {
@@ -46,6 +48,15 @@ module.exports = {
     blue: colors.lightBlue,
     yellow: colors.amber,
     green: colors.green,
+  },
+  fontFamily: {
+    sans: [
+      'ITC Avant Garde Gothic Std Book',
+      'ITC Avant Garde Gothic Std',
+      'itc-avant-garde-gothic-pro',
+      ...defaultTheme.fontFamily.sans,
+    ],
+    serif: ['Merriweather', ...defaultTheme.fontFamily.serif],
   },
   extend: {
     colors: {

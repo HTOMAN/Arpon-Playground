@@ -1,0 +1,80 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+:root {
+  --primary: #c7855b;
+  --secondary: #c3967b;
+  --background: #101219;
+  --bgg-tl: #3d3e40;
+  --bgg-br: #0b0e16;
+  --bg-static: #151518;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'ITC Avant Garde Gothic Std';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local('ITC Avant Garde Gothic Std'), url(../fonts/ITCAvantGardeStdBk.woff) format('woff');
+  }
+
+  @font-face {
+    font-family: 'ITC Avant Garde Gothic Std';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('ITC Avant Garde Gothic Std'), url(../fonts/ITCAvantGardeStdMd.woff) format('woff');
+  }
+
+  @font-face {
+    font-family: 'ITC Avant Garde Gothic Std';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('ITC Avant Garde Gothic Std'), url(../fonts/ITCAvantGardeStdDemi.woff) format('woff');
+  }
+
+  html,
+  body,
+  .app {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  html,
+  body {
+    @apply bg-no-repeat;
+    @apply bg-background;
+  }
+
+  body {
+    /*
+      radial-gradient(239.85% 97.12% at 4.03% 1.13%, var(--bgg-tl) 0%, var(--bgg-br) 81.77%) */
+
+    /*
+      url('https://www.transparenttextures.com/patterns/broken-noise.png')
+    */
+    background-image: radial-gradient(239.85% 97.12% at 4.03% 1.13%, var(--bgg-tl) 0%, var(--bgg-br) 81.77%);
+  }
+
+  .app::before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    background: url('@assets/otis-redding.png') repeat;
+    opacity: 0.1;
+  }
+}
