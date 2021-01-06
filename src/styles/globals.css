@@ -1,16 +1,13 @@
-@tailwind base;
-
-/* Write your own custom base styles here */
-
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
-
 :root {
+  /*
+  $swatch_1: #0a0a0b;
+  $swatch_2: #615f5d;
+  $swatch_3: #b09c89;
+  $swatch_4: #8b7463;
+  $swatch_5: #433938;
+  $swatch_6: #cdbdad;
+  $swatch_7: #4987b5;
+  */
   --primary: #c7855b;
   --secondary: #c3967b;
   --background: #101219;
@@ -58,13 +55,8 @@
   }
 
   body {
-    /*
-      radial-gradient(239.85% 97.12% at 4.03% 1.13%, var(--bgg-tl) 0%, var(--bgg-br) 81.77%) */
-
-    /*
-      url('https://www.transparenttextures.com/patterns/broken-noise.png')
-    */
     background-image: radial-gradient(239.85% 97.12% at 4.03% 1.13%, var(--bgg-tl) 0%, var(--bgg-br) 81.77%);
+    animation: bg 3s 1;
   }
 
   .app::before {
@@ -75,6 +67,18 @@
     position: absolute;
     content: '';
     background: url('@assets/otis-redding.png') repeat;
-    opacity: 0.1;
+    opacity: 0.12;
+  }
+}
+
+@keyframes bg {
+  from {
+    background-size: 220% 220%;
+    opacity: 0;
+  }
+
+  to {
+    background-size: 100% 100%;
+    opacity: 1;
   }
 }
