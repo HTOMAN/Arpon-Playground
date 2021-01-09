@@ -68,6 +68,9 @@
     content: '';
     background: url('@assets/otis-redding.png') repeat;
     opacity: 0.12;
+
+    @apply pointer-events-none;
+    @apply select-none;
   }
 }
 

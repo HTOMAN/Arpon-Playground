@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import * as React from "react";
 import { useState } from "react";
 import Nav from '@c/nav';
-
+import Button from '@c/Button';
 
 const style = {
   width: 100,
@@ -21,8 +21,8 @@ export const Home = (): JSX.Element => {
 
   return (
     <>
-      <Nav />
-      <AnimatePresence initial={false}>
+      {/* <Nav /> */}
+      {/* <AnimatePresence initial={false}>
         {isVisible && (
           <motion.div
           initial={{ opacity: 0 }}
@@ -33,7 +33,8 @@ export const Home = (): JSX.Element => {
             className="bg-secondary rounded"
           />
           )}
-      </AnimatePresence>
+      </AnimatePresence> */}
+      <Button label="+ Project" onClick={() => console.log('click')} />
     </>
   )
 }

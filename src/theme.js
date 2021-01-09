@@ -40,6 +40,8 @@ module.exports = {
     'danger': '#e3342f',
   }), */
   colors: {
+    transparent: 'transparent',
+    current: 'currentColor',
     primary: 'var(--primary)',
     secondary: 'var(--secondary)',
     gray: colors.trueGray,
@@ -48,9 +50,12 @@ module.exports = {
     blue: colors.lightBlue,
     yellow: colors.amber,
     green: colors.green,
+    black: colors.black,
+    white: colors.white,
   },
   fontFamily: {
     sans: [
+      'HK Grotesk',
       'ITC Avant Garde Gothic Std Book',
       'ITC Avant Garde Gothic Std',
       'itc-avant-garde-gothic-pro',
