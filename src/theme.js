@@ -1,5 +1,5 @@
 const colors = require('tailwindcss/colors');
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /*
 module.exports = {
@@ -53,6 +53,9 @@ module.exports = {
     black: colors.black,
     white: colors.white,
   },
+  flex: {
+    0: '0 0 auto',
+  },
   fontFamily: {
     sans: [
       'HK Grotesk',
@@ -65,7 +68,7 @@ module.exports = {
   },
   extend: {
     colors: {
-      background: "var(--background)",
+      background: 'var(--background)',
     },
   },
-}
+};

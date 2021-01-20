@@ -1,23 +1,23 @@
-import { motion, AnimatePresence } from "framer-motion";
-import * as React from "react";
-import { useState } from "react";
-import Nav from '@c/nav';
+// import { motion, AnimatePresence } from "framer-motion";
+import * as React from 'react';
+import { useState } from 'react';
+// import Nav from '@c/nav';
 import Button from '@c/Button';
 
-const style = {
-  width: 100,
-  height: 4,
-  opacity: 1,
-}
+// const style = {
+//   width: 100,
+//   height: 4,
+//   opacity: 1,
+// }
 
 export const Home = (): JSX.Element => {
-  const [isVisible, setVisible] = useState(true)
+  const [isVisible, setVisible] = useState(true);
 
   React.useEffect(() => {
     setTimeout(() => {
-      setVisible(!isVisible)
-    }, 1500)
-  })
+      setVisible(!isVisible);
+    }, 1500);
+  });
 
   return (
     <>
@@ -34,9 +34,20 @@ export const Home = (): JSX.Element => {
           />
           )}
       </AnimatePresence> */}
-      <Button label="+ Project" onClick={() => console.log('click')} />
+      <Button
+        icon="file-add"
+        onClick={() => alert(1)}
+        style={{
+          position: 'fixed',
+          bottom: 62,
+          left: '50%',
+          transform: 'translateX(-50%)',
+        }}
+      >
+        Project
+      </Button>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

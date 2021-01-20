@@ -1,21 +1,51 @@
-type ButtonProps = {
-  label: string;
-  onClick?(): void;
-};
+import classNames from 'classnames';
+import Icon from '../Icon';
+import { IconName } from '../Icon';
+import { MaybeNothing, Props } from '../../common/props';
 
-export default function Button({ label, onClick }: ButtonProps) {
+interface ButtonProps extends Props {
+  onClick?(): void;
+  children?: React.ReactNode;
+  icon?: IconName | MaybeNothing;
+  rightIcon?: IconName | MaybeNothing;
+  disabled?: boolean;
+}
+
+export default function Button({ icon, rightIcon, onClick, children, ...others }: ButtonProps) {
+  const classes = classNames(
+    'inline-flex',
+    'flex-row',
+    'items-center',
+    'justify-center',
+    'align-middle',
+    'transition',
+    'duration-300',
+    'ease-out',
+    'select-none',
+    'appearance-none',
+    'py-4',
+    'px-10',
+    'text-black',
+    'border-none',
+    'text-lg',
+    'font-semibold',
+    'rounded-2xl',
+    'bg-white',
+    'focus:outline-none',
+    'focus:ring',
+    'focus:border-blue-900',
+    'btn-project'
+  );
 
   const interactionProps = {
     onClick,
   };
 
   return (
-    <button
-      {...interactionProps}
-      className="transition select-none appearance-none py-3 px-10 text-black border-none text-lg font-semibold rounded-2xl bg-gradient-to-b from-white to-gray-300 hover:from-white hover:to-white focus:outline-none focus:ring focus:border-blue-900"
-      style={{ boxShadow: '0px 0px 5px 1px rgba(62, 59, 172, 0.18), 0px 5px 7px rgba(191, 191, 191, 0.1)'}}
-    >
-      {label}
+    <button {...interactionProps} className={classes} {...others}>
+      <Icon icon={icon} />
+      <span className="flex-initial inline-block last:mr-0 leading-none relative top-0.5">{children}</span>
+      <Icon icon={rightIcon} />
     </button>
   );
 }

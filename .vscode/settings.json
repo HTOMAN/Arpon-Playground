@@ -11,4 +11,7 @@
     "postcss": "pcss",
     "css": "css"
   },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
