@@ -1,12 +1,13 @@
+import { memo } from 'react';
 import classNames from 'classnames';
 import * as IconNames from './icons/iconNames';
 import { MaybeNothing, Props } from '../../common/props';
-import { IconPaths } from './icons/svgPaths';
+import { IconPaths24 } from './icons/IconPaths24';
 
 export type IconName = typeof IconNames[keyof typeof IconNames];
 
 export enum IconSizes {
-  DEFAULT = 20,
+  DEFAULT = 24,
 }
 
 type TIconSize = IconSizes | number;
@@ -29,28 +30,26 @@ interface IconProps extends Props {
   title?: string | false | null;
 }
 
+// You don't see these everyday 😬
+
 function getPaths(iconName: IconName): JSX.Element[] | null {
-  const svgPaths = IconPaths[iconName];
+  const svgPaths = IconPaths24[iconName];
   if (!svgPaths) return null;
-  return svgPaths.map((d, i) => <path d={d} key={i} fillRule="evenodd" clipRule="evenodd" />);
+  return svgPaths.map((draw, i) => {
+    console.log(draw);
+
+    return <path key={i} {...(draw as any)} />;
+  });
 }
 
-export default function Icon({ icon, iconSize = IconSizes.DEFAULT, color, ...others }: IconProps): JSX.Element | null {
+export function RawIcon({ icon, iconSize = IconSizes.DEFAULT, color, ...others }: IconProps): JSX.Element | null {
   if (icon == null || typeof icon === 'boolean') {
     return null;
   } else if (typeof icon !== 'string') {
     return icon;
   }
 
-  const classes = classNames(
-    'flex-0',
-    'inline-block',
-    'align-text-bottom',
-    'mr-2',
-    '-mr-t-1',
-    '-ml-0.5',
-    'color-inherit'
-  );
+  const classes = classNames('align-text-baseline', 'mr-1', '-mr-t-1', '-ml-0.5', 'color-inherit');
   const viewBox = `0 0 ${iconSize} ${iconSize}`;
   const paths = getPaths(icon);
 
@@ -58,6 +57,7 @@ export default function Icon({ icon, iconSize = IconSizes.DEFAULT, color, ...oth
 
   return (
     <span className={classes} style={others.style}>
+      <rect width="24" height="24" fill="none" />
       <svg fill={color} viewBox={viewBox} width={iconSize} height={iconSize} preserveAspectRatio="none">
         {title && <desc>{title}</desc>}
         {paths}
@@ -65,3 +65,7 @@ export default function Icon({ icon, iconSize = IconSizes.DEFAULT, color, ...oth
     </span>
   );
 }
+
+const Icon = memo(RawIcon);
+
+export default Icon;

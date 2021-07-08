@@ -14,21 +14,20 @@ interface ButtonProps extends Props {
 export default function Button({ icon, rightIcon, onClick, children, ...others }: ButtonProps) {
   const classes = classNames(
     'inline-flex',
-    'flex-row',
+    // 'flex-row',
     'items-center',
-    'justify-center',
-    'align-middle',
-    'transition',
-    'duration-300',
+    // 'justify-center',
+    // 'align-middle',
+    // 'transition',
+    // 'duration-300',
     'ease-out',
     'select-none',
     'appearance-none',
     'py-4',
     'px-10',
     'text-black',
-    'border-none',
-    'text-lg',
-    'font-semibold',
+    // 'border-none',
+    // 'font-semibold',
     'rounded-2xl',
     'bg-white',
     'focus:outline-none',
@@ -44,7 +43,7 @@ export default function Button({ icon, rightIcon, onClick, children, ...others }
   return (
     <button {...interactionProps} className={classes} {...others}>
       <Icon icon={icon} />
-      <span className="flex-initial inline-block last:mr-0 leading-none relative top-0.5">{children}</span>
+      <span className="last:mr-0 leading-none align-text-baseline">{children}</span>
       <Icon icon={rightIcon} />
     </button>
   );

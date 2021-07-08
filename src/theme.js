@@ -58,10 +58,11 @@ module.exports = {
   },
   fontFamily: {
     sans: [
-      'HK Grotesk',
-      'ITC Avant Garde Gothic Std Book',
-      'ITC Avant Garde Gothic Std',
-      'itc-avant-garde-gothic-pro',
+      'Inter',
+      // 'HK Grotesk',
+      // 'ITC Avant Garde Gothic Std Book',
+      // 'ITC Avant Garde Gothic Std',
+      // 'itc-avant-garde-gothic-pro',
       ...defaultTheme.fontFamily.sans,
     ],
     serif: ['Merriweather', ...defaultTheme.fontFamily.serif],
