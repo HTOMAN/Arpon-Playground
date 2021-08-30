@@ -28,6 +28,7 @@ module.exports = {
           // CSS Modules composition
           // https://github.com/css-modules/css-modules#composition
           'composes',
+          'font-named-instance',
         ],
       },
     ],
@@ -55,7 +56,7 @@ module.exports = {
           "variants",
           "responsive",
           "screen",
-          "layer"
+          "layer",
         ],
       },
     ],
