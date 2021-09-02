@@ -47,21 +47,14 @@ module.exports = {
 
     'comment-empty-line-before': null,
 
-    "at-rule-no-unknown": [
+    'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: [
-          "tailwind",
-          "apply",
-          "variants",
-          "responsive",
-          "screen",
-          "layer",
-        ],
+        ignoreAtRules: ['tailwind', 'apply', 'variants', 'responsive', 'screen', 'layer'],
       },
     ],
-    "declaration-block-trailing-semicolon": null,
-    "no-descending-specificity": null,
+    'declaration-block-trailing-semicolon': null,
+    'no-descending-specificity': null,
 
     // Opinionated rule, you can disable it if you want
     'string-quotes': 'single',

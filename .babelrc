@@ -1,13 +1,16 @@
 {
   "presets": ["next/babel"],
   "plugins": [
-    ["module-resolver", {
-      "root": ["./"],
-      "alias": {
-        "@": "./src",
-        "@assets": "./assets",
-        "@c": "./src/components"
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@": "./src",
+          "@assets": "./assets",
+          "@c": "./src/components"
+        }
       }
-    }]
+    ]
   ]
 }
