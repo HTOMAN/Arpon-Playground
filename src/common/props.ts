@@ -1,3 +1,4 @@
+// import React from 'react';
 /**
  * A shared base interface for all component props.
  */
@@ -6,5 +7,3 @@ export interface Props {
   className?: string;
   style?: React.CSSProperties;
 }
-
-export type MaybeNothing = JSX.Element | false | null | undefined;

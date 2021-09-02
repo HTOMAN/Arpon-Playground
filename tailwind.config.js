@@ -11,4 +11,4 @@ module.exports = {
   theme: require('./src/theme.js'),
   variants: {},
   plugins: [],
-}
+};

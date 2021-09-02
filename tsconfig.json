@@ -30,6 +30,9 @@
     "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
+      "@": [
+        "./",
+      ],
       "@/": [
         "src/"
       ],
@@ -53,6 +56,7 @@
     "jest.config.js"
   ],
   "include": [
+    "global.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",

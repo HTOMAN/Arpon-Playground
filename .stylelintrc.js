@@ -74,6 +74,7 @@ module.exports = {
     'value-list-comma-newline-after': null,
     'declaration-colon-newline-after': null,
     'function-comma-newline-after': null,
-    'declaration-colon-space-after': null
+    'declaration-colon-space-after': null,
+    'value-keyword-case': null,
   },
 };

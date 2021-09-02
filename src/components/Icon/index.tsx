@@ -36,20 +36,18 @@ function getPaths(iconName: IconName): JSX.Element[] | null {
   const svgPaths = IconPaths24[iconName];
   if (!svgPaths) return null;
   return svgPaths.map((draw, i) => {
-    console.log(draw);
-
     return <path key={i} {...(draw as any)} />;
   });
 }
 
-export function RawIcon({ icon, iconSize = IconSizes.DEFAULT, color, ...others }: IconProps): JSX.Element | null {
+export function BaseIcon({ icon, iconSize = IconSizes.DEFAULT, color, ...others }: IconProps): JSX.Element | null {
   if (icon == null || typeof icon === 'boolean') {
     return null;
   } else if (typeof icon !== 'string') {
     return icon;
   }
 
-  const classes = classNames('align-text-baseline', 'mr-1', '-mr-t-1', '-ml-0.5', 'color-inherit');
+  const classes = classNames('align-text-baseline', 'color-inherit');
   const viewBox = `0 0 ${iconSize} ${iconSize}`;
   const paths = getPaths(icon);
 
@@ -66,6 +64,6 @@ export function RawIcon({ icon, iconSize = IconSizes.DEFAULT, color, ...others }
   );
 }
 
-const Icon = memo(RawIcon);
+const Icon = memo(BaseIcon);
 
 export default Icon;
