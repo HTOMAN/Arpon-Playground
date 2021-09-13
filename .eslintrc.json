@@ -59,6 +59,12 @@
         // "@typescript-eslint/class-name-casing": "off",
         "@typescript-eslint/no-var-requires": "off"
       }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-dupe-class-members": "off"
+      }
     }
   ]
 }
