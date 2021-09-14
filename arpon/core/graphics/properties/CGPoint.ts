@@ -1,4 +1,4 @@
-import { Equatable } from 'arpon/basic-behaviors/Equatable';
+import Equatable from 'arpon/basic-behaviors/Equatable';
 
 /* eslint-disable no-console */
 export interface PointValues {
@@ -15,7 +15,7 @@ export interface Point extends Equatable<PointValues> {
 /** Describes and provides methods to work with two-dimensional coordinate system.
  * @internal
  */
-export class CGPoint implements Point, PointValues {
+export default class CGPoint implements Point, PointValues {
   static init(point: PointValues) {
     return new CGPoint(point.x, point.y);
   }

@@ -1,4 +1,4 @@
-import { CGPoint } from '../CGPoint';
+import CGPoint from '../core/graphics/properties/CGPoint';
 
 describe('CGPoint', () => {
   it('create a Point with 0 0 with default arguments', () => {
