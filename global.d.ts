@@ -11,6 +11,7 @@ export type Frame = Point & {
   height: number;
   width: number;
   rounded?: boolean = false;
+  radius?: number = false;
   clipToBounds?: boolean = false;
 };
 
@@ -55,17 +56,11 @@ export class UIColor implements UIColor {
   }
 } */
 
-export interface UIViewProperties {
-  backgroundColor?: string = 'transparent';
-  hidden?: boolean = false;
-  alpha?: number = 1;
-}
-
 export interface UIElement {
   nodes: React.ReactNode[];
 }
 
-export type UIView = UIViewProperties & Frame;
+export type UIView = ImmediateAppearance & Frame;
 
 export interface SvgPathProps {
   /* The d attribute defines a path to be drawn. */
