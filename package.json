@@ -24,6 +24,9 @@
       "yarn format"
     ]
   },
+  "engines": {
+    "node": ">=12"
+  },
   "dependencies": {
     "classnames": "^2.2.6",
     "framer": "^1.2.11",
