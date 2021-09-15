@@ -4,9 +4,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch CGPoint",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
+      "skipFiles": ["<node_internals>/**"],
       "program": "${file}",
       "preLaunchTask": "tsc: build - arpon/tsconfig.json",
       "outFiles": ["${workspaceFolder}/arpon/out/**/*.js"]
