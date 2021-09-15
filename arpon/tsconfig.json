@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "outDir": "out",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -24,16 +25,11 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "jsx": "preserve",
-    "baseUrl": "./",
     "paths": {
-      "@": ["./"],
-      "@/": ["src/"],
-      "@/*": ["src/*"],
-      "@assets/*": ["assets/*"],
-      "@c/*": ["src/components/*"],
-      "@arpon": ["arpon/"]
+      "@arpon": ["./"],
+      "arpon": ["./"]
     }
   },
-  "exclude": ["node_modules", ".next", "out", "config/**", "babel.config.js", "jest.config.js"],
-  "include": ["arpon/**/*.ts", "global.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
+  "exclude": ["out", "jest.config.js"],
+  "include": ["**/*.ts"]
 }
