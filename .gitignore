@@ -1,19 +1,22 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
+node_modules
+.pnp
 .pnp.js
 
 # testing
-/coverage
+coverage
+/e2e/transform/*/coverage
+/e2e/transform/*/node_modules
+
 
 # next.js
 /.next/
 /out/
 
 # production
-/build
+build
 
 # misc
 .DS_Store
@@ -33,7 +36,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-# test
-coverage
-/e2e/transform/*/coverage
-/e2e/transform/*/node_modules
+# ts
+arpon/out
