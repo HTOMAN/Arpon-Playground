@@ -9,7 +9,7 @@
           "@": "./src",
           "@assets": "./assets",
           "@c": "./src/components",
-          "arpon": "./arpon"
+          "@arpon": "./arpon"
         }
       }
     ]
