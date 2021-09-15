@@ -1,4 +1,4 @@
-import Equatable from 'arpon/basic-behaviors/Equatable';
+import Equatable from '../../../basic-behaviors/Equatable';
 import CGPoint from './CGPoint';
 import CGSize from './CGSize';
 

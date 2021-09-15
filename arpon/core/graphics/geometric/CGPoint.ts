@@ -1,4 +1,8 @@
-import Equatable from 'arpon/basic-behaviors/Equatable';
+import Equatable from '../../../basic-behaviors/Equatable';
+
+/* type Mutable<T> = {
+  -readonly [K in keyof T]: T[K];
+}; */
 
 export interface PointValues {
   readonly x: number;
@@ -11,8 +15,33 @@ export interface Point extends Equatable<PointValues> {
   coordinates?: () => Iterable<number>;
 }
 
-/** Describes and provides methods to work with two-dimensional coordinate system.
- * @internal
+/* function mutable(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  console.log(target);
+  console.log(propertyKey);
+  console.log(descriptor);
+
+  //target = new CGPoint(0, 0);
+
+  const original = descriptor.value;
+
+  descriptor.value = function (...args) {
+    console.log('params: ', ...args);
+    const result = original.call(this, ...args);
+    console.log('result: ', result);
+    return result;
+  };
+} */
+
+/* function immutable(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  const original = descriptor.set;
+
+  descriptor.set = function (value: any) {
+    return original.call(this, { ...value });
+  };
+} */
+
+/**
+ * Describes and provides methods to work with two-dimensional coordinate system.
  */
 export default class CGPoint implements Point, PointValues {
   static init(point: PointValues) {
@@ -43,3 +72,6 @@ export default class CGPoint implements Point, PointValues {
     return [this.x, this.y];
   }
 }
+
+// eslint-disable-next-line no-console
+// console.log(new CGPoint().setY(950));

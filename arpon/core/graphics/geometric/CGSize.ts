@@ -1,4 +1,4 @@
-import Equatable from 'arpon/basic-behaviors/Equatable';
+import Equatable from '../../../basic-behaviors/Equatable';
 
 export interface SizeValues {
   readonly width: number;
