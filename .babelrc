@@ -8,7 +8,8 @@
         "alias": {
           "@": "./src",
           "@assets": "./assets",
-          "@c": "./src/components"
+          "@c": "./src/components",
+          "arpon": "./arpon"
         }
       }
     ]

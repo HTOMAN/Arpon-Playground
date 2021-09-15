@@ -30,7 +30,8 @@
       "@/": ["src/"],
       "@/*": ["src/*"],
       "@assets/*": ["assets/*"],
-      "@c/*": ["src/components/*"]
+      "@c/*": ["src/components/*"],
+      "arpon/": ["./arpon/"]
     }
   },
   "exclude": ["node_modules", ".next", "out", "config/**", "babel.config.js", "jest.config.js"],

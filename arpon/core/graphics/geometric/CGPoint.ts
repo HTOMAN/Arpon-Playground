@@ -1,6 +1,5 @@
 import Equatable from 'arpon/basic-behaviors/Equatable';
 
-/* eslint-disable no-console */
 export interface PointValues {
   readonly x: number;
   readonly y: number;
