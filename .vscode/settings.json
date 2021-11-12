@@ -14,5 +14,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "svg.preview.background": "black"
+  "svg.preview.background": "black",
+  "wallaby.node": "~/.nvm/versions/node/v12.22.5/bin/node"
 }

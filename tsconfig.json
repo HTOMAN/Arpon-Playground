@@ -34,6 +34,11 @@
       "@arpon": ["arpon/"]
     }
   },
+  "references": [
+    {
+      "path": "./arpon",
+    }
+  ],
   "exclude": ["node_modules", ".next", "out", "config/**", "babel.config.js", "jest.config.js"],
-  "include": ["arpon/**/*.ts", "global.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
+  "include": ["arpon/**/*.ts", "arpon/*.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
 }

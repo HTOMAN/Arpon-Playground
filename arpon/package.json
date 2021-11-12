@@ -1,0 +1,26 @@
+{
+  "name": "arpon",
+  "version": "0.0.1",
+  "description": "Specialized interface framework",
+  "main": "\"\"",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/HTOMAN/Arpon.git"
+  },
+  "keywords": [
+    "ui",
+    "react",
+    "framework"
+  ],
+  "author": "@htoman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HTOMAN/Arpon/issues"
+  },
+  "homepage": "https://github.com/HTOMAN/Arpon#readme",
+  "types": "./index.d.ts"
+}
