@@ -3,6 +3,18 @@
   "author": "@jaikme",
   "license": "MIT",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HTOMAN/Arpon-Playground.git"
+  },
+  "keywords": [
+    "HTOMAN",
+    "Arpon"
+  ],
+  "bugs": {
+    "url": "https://github.com/HTOMAN/Arpon-Playground/issues"
+  },
+  "homepage": "https://github.com/HTOMAN/Arpon-Playground/blob/main/README.md",
   "scripts": {
     "start": "next dev",
     "build": "next build",
