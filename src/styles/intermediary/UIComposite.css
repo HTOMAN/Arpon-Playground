@@ -1,0 +1,6 @@
+.ui-composite {
+  &,
+  & * {
+    @apply origin-top-left;
+  }
+}

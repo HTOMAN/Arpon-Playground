@@ -44,17 +44,23 @@ module.exports = {
     current: 'currentColor',
     primary: 'var(--primary)',
     secondary: 'var(--secondary)',
-    gray: colors.trueGray,
-    warmGray: colors.warmGray,
+    gray: colors.neutral,
+    stone: colors.stone,
     red: colors.red,
-    blue: colors.lightBlue,
+    blue: colors.sky,
     yellow: colors.amber,
     green: colors.green,
     black: colors.black,
     white: colors.white,
+    slate: colors.slate,
+    indigo: colors.indigo,
   },
   flex: {
     0: '0 0 auto',
+  },
+  fontSize: {
+    tiny: '0.860rem;',
+    base: '0.93rem',
   },
   fontFamily: {
     sans: [

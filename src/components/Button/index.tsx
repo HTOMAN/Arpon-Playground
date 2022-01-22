@@ -25,17 +25,11 @@ export function BaseButton({ icon, rightIcon, onClick, children, className, ...o
     // 'ease-out',
     'select-none': true,
     'appearance-none': true,
-    'py-4': true,
-    'px-10': true,
-    'text-black': true,
     // 'border-none',
     // 'font-semibold',
-    'rounded-2xl': true,
-    'bg-white': true,
     'focus:outline-none': true,
     'focus:ring': true,
     'focus:border-blue-900': true,
-    'btn-project': true,
   });
 
   const interactionProps = {

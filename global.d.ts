@@ -1,88 +1,86 @@
-declare type NonZeroEvenOddInheritRules = 'nonzero' | 'evenodd' | 'inherit';
-declare type ClipRule = NonZeroEvenOddInheritRules;
-declare type FillRule = NonZeroEvenOddInheritRules;
+type Alignment = 'start' | 'center' | 'end';
 
-export type Point = {
-  readonly x: number;
-  readonly y: number;
-};
+interface ComponentView {
+  // Fixture value
+  value?: () => Component | any;
 
-export type Frame = Point & {
-  height: number;
-  width: number;
-  rounded?: boolean = false;
-  radius?: number = false;
-  clipToBounds?: boolean = false;
-};
+  /* If Value is component, set its props like:
+   * props: {
+   *   checked: true,
+   * },
+   */
+  props?: object;
 
-export interface Fixture {
-  style?: React.CSSProperties;
+  /* If Value is component, set its events like:
+   * on: {
+   *   change: () => console.log('change'),
+   * },
+   */
+  on?: object;
 }
 
-export class Sprite {
-  public image?: HTMLImageElement;
+interface Fixture extends ComponentView {
+  // Styles
+  style?: object;
+  wrapperStyle?: object;
+  contentStyle?: object;
 }
 
-/*
-export type Opaque<K, T> = T & { __TYPE__: K };
-type HexCode = Opaque<string, "HexCode">
+interface DefaultRowProps {
+  // Action when selected with touch, keyboard action, or shortcut.
+  onSelected?: (item) => {};
 
-const createHexCode = (str: string): HexCode => {
-  // implementation that forces string to be hexCode
-  return str.toString() as HexCode // casting is needed.
-}
-const test = createHexCode("#333");
-const isAssignableString: string = test; // yes anything that is HexCode is still technically a string.
-const isAssignableHexCode: HexCode = "standard string" // error
-*/
+  // The keyboard shortcut
+  shortcut?: number | string;
 
-/* export type UIColor = {
-  readonly value: number;
-  readonly hexString: string;
-};
+  // Row top level style
+  wrapperStyle?: object;
 
-export class UIColor implements UIColor {
-  readonly value;
-  readonly _hexString;
+  // Row content container style (don't include and/start fixtures container)
+  contentStyle?: object;
 
-  constructor(value: number) {
-    this.value = value;
-    this._hexString = value.toString(16);
-    // yourNumber = parseInt(hexString, 16);
-  }
+  // If row should highlighted or not
+  highlightSelect?: boolean;
 
-  public get hexString(): string {
-    return this._hexString;
-  }
-} */
+  // The highlight color
+  highlightColor?: string;
 
-export interface UIElement {
-  nodes: React.ReactNode[];
-}
+  // If the row should have minimal spaces
+  small?: boolean;
 
-export type UIView = ImmediateAppearance & Frame;
+  // Vertical items align
+  align?: Alignment;
 
-export interface SvgPathProps {
-  /* The d attribute defines a path to be drawn. */
-  d: string;
+  // Useful to put anything before the label
+  startFixture?: Fixture;
 
-  /* color */
-  stroke?: string;
-  /* shape to be used at the end of open subpaths */
-  strokeLinecap?: 'butt' | 'round' | 'square';
-  /* the shape to be used at the corners */
-  strokeLinejoin?: string;
-  /* the width of the stroke */
-  strokeWidth?: number;
+  // If you dont want work with labels, you can inject your own main content in the row.
+  customView?: ComponentView;
 
-  /* color to paint the element */
-  fill?: string;
-  /* the algorithm to use to determine the inside part of a shape */
-  fillRule?: FillRule;
+  // Row labels
+  label?: {
+    value: string;
+    description?: string;
+    style?: object;
 
-  /* specifies the transparency */
-  opacity?: number;
+    // Anything immediate before label. Can be a function that will pass a row position, plain text or a Fixture object
+    prefix?: (position) => {} | string;
+    prefixStyle?: object;
+  };
 
-  /* clipping rule(nonzero | evenodd | inherit) to work along with clipPath element */
-  clipRule?: ClipRule;
+  rightLabel?: {
+    value: string;
+    description?: string;
+    style?: object;
+
+    // Anything immediate next to righLabel. Can be a function that will compute some value, plain text or a Fixture object
+    sufix?: () => any | string | number;
+    sufixStyle?: object;
+
+    // To use component instead plain content in sufix, set it true
+    sufixUseFixture?: boolean;
+  };
+
+  // Useful to put anything after the label or rightLabel block
+  endFixture?: Fixture;
 }

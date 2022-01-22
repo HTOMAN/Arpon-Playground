@@ -1,5 +1,5 @@
 module.exports = {
-  future: {
+  /* future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
@@ -7,7 +7,8 @@ module.exports = {
     gradientColorStops: true,
   },
   darkMode: 'media',
-  purge: ['./src/components/**/*.{js,ts,jsx,tsx}', './src/pages/**/*.{js,ts,jsx,tsx}'],
+  prefix: '', */
+  content: ['./src/{components,intermediary,elements,pages,primitives,styles}/**/*.{js,ts,jsx,tsx}'],
   theme: require('./src/theme.js'),
   variants: {},
   plugins: [],

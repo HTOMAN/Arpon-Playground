@@ -16,9 +16,11 @@ class TheDocument extends Document {
         </Head>
         <body>
           <div className="app">
-            <Main />
-            <NextScript />
+            <div className="app-in">
+              <Main />
+            </div>
           </div>
+          <NextScript />
         </body>
       </Html>
     );

@@ -61,6 +61,7 @@ export default class CGPoint implements Point, PointValues {
 
   /** New Point with modified y value */
   public setY(y: number) {
+    y;
     return new CGPoint(this.x, y);
   }
 

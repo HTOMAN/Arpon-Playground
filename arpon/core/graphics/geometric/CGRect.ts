@@ -7,6 +7,7 @@ export interface RectValues {
   readonly y: number;
   readonly width: number;
   readonly height: number;
+  sufix?: () => any | string | number;
 }
 
 export interface Rect extends Equatable<RectValues> {
