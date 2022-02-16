@@ -4,7 +4,7 @@ import { useState } from 'react';
 // import Nav from '@c/nav';
 // import Rectangle from '@/primitives/Rectangle';
 import UIComposite from '@/intermediary/UIComposite';
-import Button from '@/components/Button';
+// import Button from '@/components/Button';
 // import UIElement from '@/elements/UIElement';
 
 // const style = {
@@ -24,7 +24,12 @@ export const Home = (): JSX.Element => {
 
   return (
     <>
-      <div style={{ padding: 10, outlineColor: 'transparent' }}>
+      <div
+        style={{
+          margin: 10,
+          outlineColor: 'transparent',
+        }}
+      >
         <UIComposite message="Hello" backgroundColor="" />
       </div>
 

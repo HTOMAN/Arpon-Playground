@@ -21,6 +21,8 @@ class TheDocument extends Document {
             </div>
           </div>
           <NextScript />
+          <script src="https://rawgit.com/gss/engine/2.1.x/dist/gss.js"></script>
+          <script type="text/javascript">window.engine = new GSS(document, null);</script>
         </body>
       </Html>
     );

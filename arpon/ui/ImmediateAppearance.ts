@@ -1,3 +1,6 @@
+import CGPoint from 'arpon/core/graphics/geometric/CGPoint';
+import CGRect from 'arpon/core/graphics/geometric/CGRect';
+
 export interface ImmediateAppearance {
   /*  The view’s background color. */
   backgroundColor?: string; // UIColor?
@@ -10,6 +13,20 @@ export interface ImmediateAppearance {
 
   /* A Boolean value that determines whether subviews are confined to the bounds of the view. */
   clipToBounds?: boolean;
+
+  // Configuring the Bounds and Frame Rectangles
+
+  /* The frame rectangle, which describes the view’s location and size in its superview’s coordinate system. */
+  frame?: CGRect;
+
+  /* The bounds rectangle, which describes the view’s location and size in its own coordinate system. */
+  bounds?: CGRect;
+
+  /* The center point of the view's frame rectangle. */
+  center?: CGPoint;
+
+  /* Specifies the transform applied to the view, relative to the center of its bounds. */
+  // transform?: CGAffineTransform
 
   /*
 

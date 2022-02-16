@@ -37,6 +37,8 @@ const Rectangle: React.VoidFunctionComponent<P> = (props: P) => {
 
   const rules: CSSProperties = {
     transform: `translate(${props.x}px, ${props.y}px)`,
+    width: 'fit-content',
+    ...props.style,
   };
 
   /* Swift ref

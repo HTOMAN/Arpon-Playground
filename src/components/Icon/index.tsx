@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { CSSProperties, memo } from 'react';
 import classNames from 'classnames';
 import * as IconNames from './icons/iconNames';
 import { Props } from '../../common/props';
@@ -37,6 +37,11 @@ interface IconProps extends Props {
   title?: string | false | null;
 
   /**
+   * CSS Properties.
+   */
+  style?: CSSProperties;
+
+  /**
    * WIP.
    */
   // aspectRatio?: AspectRatios;
@@ -61,6 +66,7 @@ export function BaseIcon({
   iconSize = IconSizes.DEFAULT,
   scale,
   className,
+  style,
   ...others
 }: IconProps): JSX.Element | null {
   if (icon == null || typeof icon === 'boolean') {
@@ -84,20 +90,19 @@ export function BaseIcon({
   const boxRatio = [boxSize * (eWidth / boxSize), boxSize * (eHeight / boxSize)];
 
   return (
-    <span style={others.style}>
-      <svg
-        preserveAspectRatio="xMidYMid meet"
-        fill="inherit"
-        className={classes}
-        width={boxSize}
-        height={boxSize}
-        viewBox={`0 0 ${boxRatio[0]} ${boxRatio[1]}`}
-      >
-        <rect width={boxRatio[0]} height={boxRatio[1]} fill="none" />
-        {title && <desc>{title}</desc>}
-        {paths}
-      </svg>
-    </span>
+    <svg
+      preserveAspectRatio="xMidYMid meet"
+      fill="inherit"
+      className={classes}
+      width={boxSize}
+      height={boxSize}
+      viewBox={`0 0 ${boxRatio[0]} ${boxRatio[1]}`}
+      style={style}
+    >
+      <rect width={boxRatio[0]} height={boxRatio[1]} fill="none" />
+      {title && <desc>{title}</desc>}
+      {paths}
+    </svg>
   );
 }
 

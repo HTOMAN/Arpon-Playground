@@ -1,6 +1,8 @@
 .ui-composite {
   &,
   & * {
+    position: relative;
+
     @apply origin-top-left;
   }
 }

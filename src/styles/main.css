@@ -32,7 +32,7 @@
       html { font-family: 'Inter var', sans-serif; }
     }
   */
-  @font-face {
+  /*  @font-face {
     font-family: 'Inter var';
     font-weight: 100 900;
     font-display: swap;
@@ -48,7 +48,7 @@
     font-style: italic;
     font-named-instance: 'Italic';
     src: url('../fonts/Inter-italic.var.woff2?v=3.19') format('woff2');
-  }
+  } */
 
   /* --------------------------------------------------------------------------
   [EXPERIMENTAL] Multi-axis, single variable font.
@@ -71,7 +71,7 @@
     src: url('../fonts/Inter.var.woff2?v=3.19') format('woff2');
   }
 
-  @font-face {
+  /* @font-face {
     font-family: 'ITC Avant Garde Gothic Std';
     font-style: normal;
     font-weight: normal;
@@ -79,13 +79,13 @@
     src: local('ITC Avant Garde Gothic Std'), url('../fonts/ITCAvantGardeStdBk.woff') format('woff');
   }
 
-  /* @font-face {
+  @font-face {
     font-family: 'ITC Avant Garde Gothic Std';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: local('ITC Avant Garde Gothic Std'), url(../fonts/ITCAvantGardeStdMd.woff) format('woff');
-  } */
+    src: local('ITC Avant Garde Gothic Std'), url('../fonts/ITCAvantGardeStdMd.woff') format('woff');
+  }
 
   @font-face {
     font-family: 'ITC Avant Garde Gothic Std';
@@ -93,7 +93,7 @@
     font-weight: 600;
     font-display: swap;
     src: local('ITC Avant Garde Gothic Std'), url('../fonts/ITCAvantGardeStdDemi.woff') format('woff');
-  }
+  } */
 
   html,
   body,
@@ -108,7 +108,7 @@
     -webkit-font-smoothing: subpixel-antialiased;
     letter-spacing: 0.024em;
     font-variation-settings: 'wght' 400, 'slnt' 0;
-    font-feature-settings: 'liga' on, 'calt' on, 'salt' on;
+    font-feature-settings: 'liga' on, 'calt' on, 'salt' off, 'cv02', 'cv03', 'cv04', 'cv11';
     touch-action: pan-x pan-y;
     text-rendering: auto;
 
